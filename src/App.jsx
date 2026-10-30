@@ -1,4 +1,5 @@
-import { Link, Routes, Route } from "react-router";
+import { Routes, Route } from "react-router";
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
@@ -6,11 +7,7 @@ import Cart from "./pages/Cart";
 export default function App() {
   return (
     <>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/shop">Shop</Link>
-        <Link to="/cart">Cart</Link>
-      </nav>
+      <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
