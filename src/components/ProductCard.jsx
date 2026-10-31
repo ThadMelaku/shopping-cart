@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, onAddToCart }) {
   const [quantity, setQuantity] = useState(1);
 
   function incrementQuantity() {
@@ -53,6 +53,16 @@ export default function ProductCard({ product }) {
         />
 
         <button onClick={incrementQuantity}>+</button>
+
+        <button
+          type="button"
+          onClick={() => {
+            onAddToCart(product, Number(quantity) || 1);
+            setQuantity(1);
+          }}
+        >
+          Add to Cart
+        </button>
       </div>
     </article>
   );
