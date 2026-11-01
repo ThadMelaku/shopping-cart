@@ -29,7 +29,7 @@ export default function Cart({
             ))}
           </section>
 
-          <h2>Total: ${cartTotal.toFixed(2)}</h2>
+          <h2 className="cart-total">Total: ${cartTotal.toFixed(2)}</h2>
         </>
       )}
     </main>

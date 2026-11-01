@@ -53,7 +53,8 @@ export default function ProductCard({ product, onAddToCart }) {
         />
 
         <button onClick={incrementQuantity}>+</button>
-
+      </div>
+      
         <button
           type="button"
           onClick={() => {
@@ -63,7 +64,7 @@ export default function ProductCard({ product, onAddToCart }) {
         >
           Add to Cart
         </button>
-      </div>
+      
     </article>
   );
 }
